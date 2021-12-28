@@ -410,8 +410,8 @@ namespace Febucci.HierarchyData
                     }
                 }
 
-                newInfo.isSeparator = String.Compare(go.tag, "EditorOnly", StringComparison.Ordinal) == 0 //gameobject has EditorOnly tag
-                                      && (!string.IsNullOrEmpty(go.name) && !string.IsNullOrEmpty(data.separator.startString) && go.name.StartsWith(data.separator.startString)); //and also starts with '>'
+                newInfo.isSeparator = //String.Compare(go.tag, "EditorOnly", StringComparison.Ordinal) == 0 && //gameobject has EditorOnly tag
+                    (!string.IsNullOrEmpty(go.name) && !string.IsNullOrEmpty(data.separator.startString) && go.name.StartsWith(data.separator.startString)); //and also starts with '>'
 
                 if (data.icons.enabled && data.icons.pairs!=null && data.icons.pairs.Length>0)
                 {
